@@ -5,6 +5,7 @@ let chartW, chartH; // dimensioni del grafico
 
 function preload() {
   data = loadTable("data.csv", "csv", "header");
+  img = loadImage('worldmap.png');
 }
 
 function setup() {
@@ -38,6 +39,7 @@ function setup() {
 
 function draw() {
   background(10);
+  image(img, margin, margin, chartW - margin * 1.5, chartH - margin * 1.5);
 
   fill("white");
   textSize(24);
